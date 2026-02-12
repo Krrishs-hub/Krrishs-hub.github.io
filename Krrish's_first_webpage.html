@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Krrish's Website</title>
+  <link rel="stylesheet" href="Styles.css">
+</head>
+
+<body>
+  <script defer>
+    alert("Welcome to Krrish's Website!");
+  </script>
+
+  <img src="Images/Logo.png" width="120">
+  <img src="Images/Archlogo.png" width="120">
+
+  <hr>
+
+  <h1>
+    <div class="marquee-container">
+  <h1 class="marquee-text">Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊</h1>
+</div>
+
+  </h1>
+
+  <hr>
+
+  <a href="https://www.youtube.com/@KrrishsHub" target="_blank">
+    <button> Visit Krrish's hub (YouTube)</button>
+  </a>
+  <a href="https://www.instagram.com/krrish_hub/" target="_blank">
+    <button>Follow Krrish on Instagram</button>
+  </a>
+  <a href="https://www.facebook.com/AneerudhJoshi/" target="_blank">
+    <button>Connect on Facebook</button>
+  </a>
+  <br>
+  <hr>
+  <a href="https://www.youtube.com/@archanashub3491" target="_blank">
+    <button>Visit Archana's Hub (YouTube)</button>
+  </a>
+  <a href="https://www.instagram.com/travel_with_arch/?igsh=OGx0ZnQ5N3l1bnBh&utm_source=qr#" target="_blank">
+    <button>Follow Archana on Instagram</button>
+  </a>
+  <hr>
+  <h4> Hello, This is the offical Krrish's hub youtube channel webpage.</h4>
+  <h4> Here you can find all the links to my social media accounts and link's to some of my other channel's. </h4>
+  <h4> Make sure to check out my youtube channel for amazing content!<i><b> Happy new year to all!</b></i></h4>
+
+  <hr>
+  <hr>
+
+<h1>🌍 My Travel Gallery</h1>
+
+<!-- City Tabs -->
+<div class="tabs">
+  <button class="tab active" onclick="showCity('vegas', this)">Las Vegas</button>
+  <button class="tab" onclick="showCity('sf', this)">San Francisco</button>
+  <button class="tab" onclick="showCity('ny', this)">New York</button>
+</div>
+
+<!-- Galleries -->
+<div class="gallery city active" id="vegas">
+  <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/34/2d/28/caption.jpg?w=1400&h=1400&s=1&cx=662&cy=604&chk=v1_8984ddf3493edfb8c896" onclick="openViewer(0, 'vegas')">
+  <img src="https://static.wixstatic.com/media/05ebfc_a4b23772626249e3b0c488d683988789~mv2.jpeg/v1/fill/w_568,h_758,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/05ebfc_a4b23772626249e3b0c488d683988789~mv2.jpeg" onclick="openViewer(1, 'vegas')">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZEfdh7ocpdlUo_JzyLJDB6WrA2XB_MU_JZw&s" onclick="openViewer(2, 'vegas')">
+</div>
+
+<div class="gallery city" id="sf">
+  <img src="Images/sfo1.png" onclick="openViewer(0, 'sf')">
+  <img src="Images/sfo2.jpeg" onclick="openViewer(1, 'sf')">
+  <img src="Images/sfo3.jpeg" onclick="openViewer(2, 'sf')">
+</div>
+
+<div class="gallery city" id="ny">
+  <img src="Images/ny1.jpeg" onclick="openViewer(0, 'ny')">
+  <img src="Images/ny2.jpeg" onclick="openViewer(1, 'ny')">
+  <img src="Images/ny3.jpeg" onclick="openViewer(2, 'ny')">
+</div>
+
+<!-- Image Viewer -->
+<div class="viewer" id="viewer">
+  <button onclick="prevPhoto()">⬅</button>
+  <img id="viewer-img">
+  <button onclick="nextPhoto()">➡</button>
+  <span class="close" onclick="closeViewer()">✖</span>
+</div>
+
+  <footer>
+    <p><i>© 2025 Krrish's Hub. All rights reserved.</i></p>
+  </footer>
+<script>
+  let currentIndex = 0;
+  let currentCity = '';
+
+  function showCity(city, btn) {
+    document.querySelectorAll('.city').forEach(c => c.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+
+    document.getElementById(city).classList.add('active');
+    btn.classList.add('active');
+  }
+
+  function openViewer(index, city) {
+    currentIndex = index;
+    currentCity = city;
+    updateViewer();
+    document.getElementById('viewer').style.display = 'flex';
+  }
+
+  function updateViewer() {
+    const images = document.getElementById(currentCity).children;
+    document.getElementById('viewer-img').src = images[currentIndex].src;
+  }
+
+  function nextPhoto() {
+    const images = document.getElementById(currentCity).children;
+    currentIndex = (currentIndex + 1) % images.length;
+    updateViewer();
+  }
+
+  function prevPhoto() {
+    const images = document.getElementById(currentCity).children;
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateViewer();
+  }
+
+  function closeViewer() {
+    document.getElementById('viewer').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>
