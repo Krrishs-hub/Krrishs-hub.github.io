@@ -8,7 +8,7 @@
 
 </head>
 
-<body>
+<body id="Main">
   <script defer>
     alert("Welcome to Krrish's Website!");
   </script>
@@ -45,9 +45,9 @@
     <button>Follow Archana on Instagram</button>
   </a>
   <hr>
-  <h4> Hello, This is the offical Krrish's hub youtube channel webpage.</h4>
-  <h4> Here you can find all the links to my social media accounts and link's to some of my other channel's. </h4>
-  <h4> Make sure to check out my youtube channel for amazing content!<i><b> Happy new year to all!</b></i></h4>
+  <h4 class = "Text"> Hello, This is the offical Krrish's hub youtube channel webpage.</h4>
+  <h4 class = "Text"> Here you can find all the links to my social media accounts and link's to some of my other channel's. </h4>
+  <h4 Class = "Text"> Make sure to check out my youtube channel for amazing content!<i><b> Happy Valantines day to all!</b></i></h4>
 
   <hr>
   <hr>
@@ -87,9 +87,10 @@
   <button onclick="nextPhoto()">➡</button>
   <span class="close" onclick="closeViewer()">✖</span>
 </div>
-
+<button id = "Dark" onclick="Darkmode()">Dark Mode</button>
+<button id = "Light" onclick="Lightmode()">Light Mode</button>
   <footer>
-    <p><i>© 2025 Krrish's Hub. All rights reserved.</i></p>
+    <p class = "Text"><i>© 2025 Krrish's Hub. All rights reserved.</i></p>
   </footer>
 <script>
   let currentIndex = 0;
@@ -102,7 +103,16 @@
     document.getElementById(city).classList.add('active');
     btn.classList.add('active');
   }
-
+function Darkmode() {
+  document.getElementById("Main").style.backgroundColor = "Black";
+  document.getElementsByClassName("marquee-container")[0].style.backgroundColor = "Black";
+  document.querySelectorAll(".Text").forEach(e => e.style.color = "White");
+}
+function Lightmode() {
+  document.getElementById("Main").style.backgroundColor = "White";
+  document.getElementsByClassName("marquee-container")[0].style.backgroundColor = "White";
+  document.querySelectorAll(".Text").forEach(e => e.style.color = "black");
+}
   function openViewer(index, city) {
     currentIndex = index;
     currentCity = city;
@@ -134,7 +144,6 @@
 
 </body>
 </html>
-
 
 
 
