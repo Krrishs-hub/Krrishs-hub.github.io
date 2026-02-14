@@ -1,4 +1,4 @@
-body {
+#Main{
   background-color: black;
   font-family: Arial, sans-serif;
   text-align: center;
@@ -126,4 +126,10 @@ p{color: white}
 }
 .marquee-text:hover {
   animation-play-state: paused;
+}
+#Dark{font-style: italic;
+}
+#Light{font-style: italic;
+}
+.Text{color: white
 }
