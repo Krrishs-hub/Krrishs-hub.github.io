@@ -1,151 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Krrish's Hub</title>
-  <link rel="stylesheet" href="Styles.css">
-  <link rel="icon" type="image/png" href="Favicon-Finished.png">
-
+  <link rel="stylesheet" href="styles.css">
+  <!-- A friendly, rounded font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 </head>
+<body>
+  
+  <div class="marquee-container">
+    <div class="marquee-text">
+      ✨ Welcome to Krrish's First Website ✨ Happy Valentine's Day! ✨ Check out the new bright and cheery look! ✨
+    </div>
+  </div>
 
-<body id="Main">
-  <script defer>
-    alert("Welcome to Krrish's Website!");
-  </script>
+  <header>
+    <div class="logo-container">
+      <img src="Logo.png" alt="Logo" class="logo">
+      <img src="Archlogo.png" alt="Archana Logo" class="logo">
+    </div>
+    <h1>Krrish's Hub</h1>
+    <p class="subtitle">Welcome to the official webpage! Find all social links and amazing content here.</p>
+    <button id="theme-toggle" class="toggle-btn">🌙 Cozy Mode</button>
+  </header>
 
-  <img src="Logo.png" width="120">
-  <img src="Archlogo.png" width="120">
+  <main>
+    <!-- Social Links as a modern card layout -->
+    <section class="links-section">
+      <a href="https://www.youtube.com/@KrrishsHub" target="_blank" class="btn primary">🎬 Visit Krrish's Hub</a>
+      <a href="https://www.instagram.com/krrish_hub/" target="_blank" class="btn">📸 Follow Krrish</a>
+      <a href="https://www.facebook.com/AneerudhJoshi/" target="_blank" class="btn">📘 Connect on Facebook</a>
+      
+      <div class="divider"></div>
+      
+      <a href="https://www.youtube.com/@archanashub3491" target="_blank" class="btn primary">🎬 Visit Archana's Hub</a>
+      <a href="https://www.instagram.com/travel_with_arch/?igsh=OGx0ZnQ5N3l1bnBh&utm_source=qr#" target="_blank" class="btn">📸 Follow Archana</a>
+    </section>
 
-  <hr>
+    <!-- Travel Gallery -->
+    <section class="gallery-section">
+      <h2>🌍 My Travel Gallery</h2>
+      
+      <div class="tabs">
+        <button class="tab active" data-city="vegas">Las Vegas</button>
+        <button class="tab" data-city="sf">San Francisco</button>
+        <button class="tab" data-city="ny">New York</button>
+        <button class="tab" data-city="hawaii">Hawaii</button>
+        <button class="tab" data-city="dubai">Dubai</button>
+      </div>
 
-  <h1>
-    <div class="marquee-container">
-  <h1 class="marquee-text">Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊Krrish's First Website😊😊😊</h1>
-</div>
+      <!-- Las Vegas -->
+      <div class="gallery city active" id="vegas">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/34/2d/28/caption.jpg?w=1400&h=1400&s=1&cx=662&cy=604&chk=v1_8984ddf3493edfb8c896" alt="Las Vegas" onclick="openViewer(this, 'vegas')">
+        <img src="https://static.wixstatic.com/media/05ebfc_a4b23772626249e3b0c488d683988789~mv2.jpeg/v1/fill/w_568,h_758,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/05ebfc_a4b23772626249e3b0c488d683988789~mv2.jpeg" alt="Las Vegas" onclick="openViewer(this, 'vegas')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZEfdh7ocpdlUo_JzyLJDB6WrA2XB_MU_JZw&s" alt="Las Vegas" onclick="openViewer(this, 'vegas')">
+      </div>
 
-  </h1>
+      <!-- San Francisco -->
+      <div class="gallery city" id="sf">
+        <img src="sfo1.png" alt="San Francisco" onclick="openViewer(this, 'sf')">
+        <img src="sfo2.jpeg" alt="San Francisco" onclick="openViewer(this, 'sf')">
+        <img src="sfo3.jpeg" alt="San Francisco" onclick="openViewer(this, 'sf')">
+      </div>
 
-  <hr>
+      <!-- New York -->
+      <div class="gallery city" id="ny">
+        <img src="ny1.jpeg" alt="New York" onclick="openViewer(this, 'ny')">
+        <img src="ny2.jpeg" alt="New York" onclick="openViewer(this, 'ny')">
+        <img src="ny3.jpeg" alt="New York" onclick="openViewer(this, 'ny')">
+      </div>
 
-  <a href="https://www.youtube.com/@KrrishsHub" target="_blank">
-    <button> Visit Krrish's hub (YouTube)</button>
-  </a>
-  <a href="https://www.instagram.com/krrish_hub/" target="_blank">
-    <button>Follow Krrish on Instagram</button>
-  </a>
-  <a href="https://www.facebook.com/AneerudhJoshi/" target="_blank">
-    <button>Connect on Facebook</button>
-  </a>
-  <br>
-  <hr>
-  <a href="https://www.youtube.com/@archanashub3491" target="_blank">
-    <button>Visit Archana's Hub (YouTube)</button>
-  </a>
-  <a href="https://www.instagram.com/travel_with_arch/?igsh=OGx0ZnQ5N3l1bnBh&utm_source=qr#" target="_blank">
-    <button>Follow Archana on Instagram</button>
-  </a>
-  <hr>
-  <h4 class = "Text"> Hello, This is the offical Krrish's hub youtube channel webpage.</h4>
-  <h4 class = "Text"> Here you can find all the links to my social media accounts and link's to some of my other channel's. </h4>
-  <h4 Class = "Text"> Make sure to check out my youtube channel for amazing content!<i><b> Happy Valantines day to all!</b></i></h4>
+      <!-- Hawaii (Ready for photos!) -->
+      <div class="gallery city" id="hawaii">
+        <div class="placeholder">Drop your Honolulu and Maui photos here!</div>
+      </div>
 
-  <hr>
-  <hr>
+      <!-- Dubai (Ready for photos!) -->
+      <div class="gallery city" id="dubai">
+        <div class="placeholder">Drop your Dubai photos here!</div>
+      </div>
+    </section>
+  </main>
 
-<h1>🌍 My Travel Gallery</h1>
+  <!-- Image Lightbox Viewer -->
+  <div class="viewer" id="viewer">
+    <span class="close" onclick="closeViewer()">✖</span>
+    <button onclick="prevPhoto()" class="nav-btn">⬅</button>
+    <img id="viewer-img" src="" alt="Viewer">
+    <button onclick="nextPhoto()" class="nav-btn">➡</button>
+  </div>
 
-<!-- City Tabs -->
-<div class="tabs">
-  <button class="tab active" onclick="showCity('vegas', this)">Las Vegas</button>
-  <button class="tab" onclick="showCity('sf', this)">San Francisco</button>
-  <button class="tab" onclick="showCity('ny', this)">New York</button>
-</div>
-
-<!-- Galleries -->
-<div class="gallery city active" id="vegas">
-  <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/34/2d/28/caption.jpg?w=1400&h=1400&s=1&cx=662&cy=604&chk=v1_8984ddf3493edfb8c896" onclick="openViewer(0, 'vegas')">
-  <img src="https://static.wixstatic.com/media/05ebfc_a4b23772626249e3b0c488d683988789~mv2.jpeg/v1/fill/w_568,h_758,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/05ebfc_a4b23772626249e3b0c488d683988789~mv2.jpeg" onclick="openViewer(1, 'vegas')">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZEfdh7ocpdlUo_JzyLJDB6WrA2XB_MU_JZw&s" onclick="openViewer(2, 'vegas')">
-</div>
-
-<div class="gallery city" id="sf">
-  <img src="sfo1.png" onclick="openViewer(0, 'sf')">
-  <img src="sfo2.jpeg" onclick="openViewer(1, 'sf')">
-  <img src="sfo3.jpeg" onclick="openViewer(2, 'sf')">
-</div>
-
-<div class="gallery city" id="ny">
-  <img src="ny1.jpeg" onclick="openViewer(0, 'ny')">
-  <img src="ny2.jpeg" onclick="openViewer(1, 'ny')">
-  <img src="ny3.jpeg" onclick="openViewer(2, 'ny')">
-</div>
-
-<!-- Image Viewer -->
-<div class="viewer" id="viewer">
-  <button onclick="prevPhoto()">⬅</button>
-  <img id="viewer-img">
-  <button onclick="nextPhoto()">➡</button>
-  <span class="close" onclick="closeViewer()">✖</span>
-</div>
-<button id = "Dark" onclick="Darkmode()">Dark Mode</button>
-<button id = "Light" onclick="Lightmode()">Light Mode</button>
   <footer>
-    <p class = "Text"><i>© 2025 Krrish's Hub. All rights reserved.</i></p>
+    <p><i>© 2026 Krrish's Hub. All rights reserved.</i></p>
   </footer>
-<script>
-  let currentIndex = 0;
-  let currentCity = '';
 
-  function showCity(city, btn) {
-    document.querySelectorAll('.city').forEach(c => c.classList.remove('active'));
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-
-    document.getElementById(city).classList.add('active');
-    btn.classList.add('active');
-  }
-function Darkmode() {
-  document.getElementById("Main").style.backgroundColor = "Black";
-  document.getElementsByClassName("marquee-container")[0].style.backgroundColor = "Black";
-  document.querySelectorAll(".Text").forEach(e => e.style.color = "White");
-}
-function Lightmode() {
-  document.getElementById("Main").style.backgroundColor = "White";
-  document.getElementsByClassName("marquee-container")[0].style.backgroundColor = "White";
-  document.querySelectorAll(".Text").forEach(e => e.style.color = "black");
-}
-  function openViewer(index, city) {
-    currentIndex = index;
-    currentCity = city;
-    updateViewer();
-    document.getElementById('viewer').style.display = 'flex';
-  }
-
-  function updateViewer() {
-    const images = document.getElementById(currentCity).children;
-    document.getElementById('viewer-img').src = images[currentIndex].src;
-  }
-
-  function nextPhoto() {
-    const images = document.getElementById(currentCity).children;
-    currentIndex = (currentIndex + 1) % images.length;
-    updateViewer();
-  }
-
-  function prevPhoto() {
-    const images = document.getElementById(currentCity).children;
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    updateViewer();
-  }
-
-  function closeViewer() {
-    document.getElementById('viewer').style.display = 'none';
-  }
-</script>
-
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
